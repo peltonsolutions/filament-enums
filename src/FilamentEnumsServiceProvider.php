@@ -1,5 +1,7 @@
 <?php
 
+namespace PeltonSolutions\FilamentEnums;
+
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\ServiceProvider;
 
