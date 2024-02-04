@@ -1,0 +1,64 @@
+{
+  "name": "peltonsolutions/filament-enums",
+  "description": "A custom package for Filament for handling enum values in Filament Admin.",
+  "keywords": [
+    "peltonsolutions",
+    "laravel",
+    "filament",
+    "filament-enums"
+  ],
+  "homepage": "https://github.com/peltonsolutions/filament-enums",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nathan Pelton",
+      "email": "npelton@gmail.com",
+      "homepage": "https://www.nathanpelton.com",
+      "role": "Developer"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/peltonsolutions/laravel-enums"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "filament/filament": "^3.0.9",
+    "peltonsolutions/laravel-enums": "dev-main"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.5|^9.5.10|^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PeltonSolutions\\FilamentEnums\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PeltonSolutions\\FilamentEnums\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "watch": "vendor/bin/phpunit-watcher watch"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PeltonSolutions\\FilamentEnums\\FilamentEnumsServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
