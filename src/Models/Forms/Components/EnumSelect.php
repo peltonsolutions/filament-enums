@@ -34,7 +34,7 @@ class EnumSelect extends Select
 						 if ( $record instanceof Model && isset($record->getCasts()[$component->name]) ) {
 							 $classname = $record->getCasts()[$component->name];
 							 if (is_subclass_of($classname, Enum::class)) {
-								 return $classname::map();
+								 return array_keys($classname::map());
 							 }
 						 }
 						 return [];
