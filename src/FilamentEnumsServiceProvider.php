@@ -19,6 +19,6 @@ class FilamentEnumsServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-		AboutCommand::add('My Package - Test', fn() => ['Version' => '1.0.0']);
+		AboutCommand::add('Pelton Solutions - Filament Enums', fn() => ['Version' => '1.0.0']);
 	}
 }
