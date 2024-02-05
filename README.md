@@ -1,10 +1,22 @@
 # filament-enums
 
-`composer require peltonsolutions/filament-enums`
+filament-enums is an extension to the peltonsolutions/laravel-enums package, designed specifically for Laravel developers. This package simplifies working with enumerated values in your Filament applications, thus enhancing the readability and maintainability of your code.
+
+Like the laravel-enums package, filament-enums supports the use of named constants, improving the organization and clarity of your code. It leverages the features provided by laravel-enums, complementing them with additional functionalities tailored for Filament.
+
+Optionally, this package allows you to make your Enum fields nullable through the `NullableEnum` class extension.
+
+## Install
+
+You can install the package via composer using the following command:
+
+``` bash
+composer require peltonsolutions/filament-enums
+```
 
 Example:
 
-```
+```php
 class ContentPageStatus extends \PeltonSolutions\LaravelEnums\Models\Enum
 {
 	const DRAFT = 'draft';
@@ -24,7 +36,7 @@ class ContentPageStatus extends \PeltonSolutions\LaravelEnums\Models\Enum
 }
 ```
 
-```
+```php
 class ContentPage extends Model
 {
 	protected $casts = [
@@ -33,7 +45,7 @@ class ContentPage extends Model
 }
 ```
 
-```
+```php
 class ContentPageResource extends Resource
 {
 	protected static ?string $model = ContentPage::class;
@@ -49,11 +61,20 @@ class ContentPageResource extends Resource
 ```
 
 This will create a Select component that:
-1. Gives options from the map() function
-2. Makes the field required if it's not \PeltonSolutions\LaravelEnums\Models\NullableEnum
-3. Requires that the selected value matches one of the map() keys
+1. Gives options from the `map()` function
+2. Makes the field required if it's not `\PeltonSolutions\LaravelEnums\Models\NullableEnum`
+3. Requires that the selected value matches one of the `map()` keys
 
+### Security
+
+If you discover any security-related issues, please
+email [security@peltonsolutions.com](mailto:security@peltonsolutions.com) instead of using the issue tracker.
+
+## Credits
+
+- [Nathan Pelton](https://www.nathanpelton.com)
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+filament-enums is open-sourced software. It's licensed under the [MIT license](https://opensource.org/licenses/MIT),
+which is a permissive license allowing the software to be used, modified, and shared.
