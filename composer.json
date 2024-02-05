@@ -17,19 +17,13 @@
       "role": "Developer"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/peltonsolutions/laravel-enums"
-    }
-  ],
   "require": {
     "php": "^8.2",
     "filament/filament": "^3.0.9",
-    "peltonsolutions/laravel-enums": "dev-main"
+    "peltonsolutions/laravel-enums": "^1.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^8.5|^9.5.10|^10.0"
+    "pestphp/pest": "^2.33"
   },
   "autoload": {
     "psr-4": {
