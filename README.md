@@ -1,8 +1,12 @@
 # filament-enums
 
-filament-enums is an extension to the peltonsolutions/laravel-enums package, designed specifically for Laravel developers. This package simplifies working with enumerated values in your Filament applications, thus enhancing the readability and maintainability of your code.
+filament-enums is an extension to the peltonsolutions/laravel-enums package, designed specifically for Laravel
+developers. This package simplifies working with enumerated values in your Filament applications, thus enhancing the
+readability and maintainability of your code.
 
-Like the laravel-enums package, filament-enums supports the use of named constants, improving the organization and clarity of your code. It leverages the features provided by laravel-enums, complementing them with additional functionalities tailored for Filament.
+Like the laravel-enums package, filament-enums supports the use of named constants, improving the organization and
+clarity of your code. It leverages the features provided by laravel-enums, complementing them with additional
+functionalities tailored for Filament.
 
 Optionally, this package allows you to make your Enum fields nullable through the `NullableEnum` class extension.
 
@@ -61,9 +65,20 @@ class ContentPageResource extends Resource
 ```
 
 This will create a Select component that:
+
 1. Gives options from the `map()` function
 2. Makes the field required if it's not `\PeltonSolutions\LaravelEnums\Models\NullableEnum`
 3. Requires that the selected value matches one of the `map()` keys
+
+## Testing
+
+To ensure that laravel-enums is functioning correctly, you can run the package's tests using:
+
+**NOTE: Tests are WIP. Having troubles writing tests that require the `$record` to tbe passed into the closures.**
+
+``` bash
+composer test
+```
 
 ### Security
 
