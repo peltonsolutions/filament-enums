@@ -15,7 +15,6 @@ class TestResourceWithEnumSelect extends Resource
 		return $form
 			->schema([
 				EnumSelect::make('field')
-						  ->default(TestEnum::EXAMPLE2)
 			]);
 	}
 }
