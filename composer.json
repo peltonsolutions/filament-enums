@@ -23,7 +23,8 @@
     "peltonsolutions/laravel-enums": "^1.0"
   },
   "require-dev": {
-    "pestphp/pest": "^2.33"
+    "pestphp/pest": "^2.33",
+    "pestphp/pest-plugin-livewire": "^2.1"
   },
   "autoload": {
     "psr-4": {
@@ -36,15 +37,7 @@
     }
   },
   "scripts": {
-    "test": "vendor/bin/phpunit",
-    "watch": "vendor/bin/phpunit-watcher watch"
-  },
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "pestphp/pest-plugin": true,
-      "phpstan/extension-installer": true
-    }
+    "test": "vendor/bin/pest"
   },
   "extra": {
     "laravel": {
@@ -54,5 +47,10 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
 }
