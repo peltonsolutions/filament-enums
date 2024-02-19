@@ -12,8 +12,11 @@ class EnumSelect extends Select
 	public static function make(string $name): static
 	{
 		return parent::make($name)
-					 ->options(function($record, self $component) {
-						 if ( $record instanceof Model && isset($record->getCasts()[$component->name]) ) {
+					 ->options(function ($record, self $component) {
+						 if (!$record) {
+							 $record = new ($component->container->model);
+						 }
+						 if ($record instanceof Model && isset($record->getCasts()[$component->name])) {
 							 $classname = $record->getCasts()[$component->name];
 							 if (is_subclass_of($classname, Enum::class)) {
 								 return $classname::map();
@@ -21,17 +24,24 @@ class EnumSelect extends Select
 						 }
 						 return [];
 					 })
-					 ->required(function($record, self $component) {
-						 if ( $record instanceof Model && isset($record->getCasts()[$component->name]) ) {
+					 ->required(function ($record, self $component) {
+						 if (!$record) {
+							 $record = new ($component->container->model);
+						 }
+						 if ($record instanceof Model && isset($record->getCasts()[$component->name])) {
 							 $classname = $record->getCasts()[$component->name];
-							 if (is_subclass_of($classname, Enum::class) && !is_subclass_of($classname, NullableEnum::class)) {
+							 if (is_subclass_of($classname, Enum::class) && !is_subclass_of($classname,
+									 NullableEnum::class)) {
 								 return true;
 							 }
 						 }
 						 return false;
 					 })
-					 ->in(function($record, self $component) {
-						 if ( $record instanceof Model && isset($record->getCasts()[$component->name]) ) {
+					 ->in(function ($record, self $component) {
+						 if (!$record) {
+							 $record = new ($component->container->model);
+						 }
+						 if ($record instanceof Model && isset($record->getCasts()[$component->name])) {
 							 $classname = $record->getCasts()[$component->name];
 							 if (is_subclass_of($classname, Enum::class)) {
 								 return array_keys($classname::map());
