@@ -2,55 +2,55 @@
   "name": "peltonsolutions/filament-enums",
   "description": "A custom package for Filament for handling enum values in Filament Admin.",
   "keywords": [
-    "peltonsolutions",
-    "laravel",
-    "filament",
-    "filament-enums"
+	"peltonsolutions",
+	"laravel",
+	"filament",
+	"filament-enums"
   ],
   "homepage": "https://github.com/peltonsolutions/filament-enums",
   "license": "MIT",
   "authors": [
-    {
-      "name": "Nathan Pelton",
-      "email": "npelton@gmail.com",
-      "homepage": "https://www.nathanpelton.com",
-      "role": "Developer"
-    }
+	{
+	  "name": "Nathan Pelton",
+	  "email": "npelton@gmail.com",
+	  "homepage": "https://www.nathanpelton.com",
+	  "role": "Developer"
+	}
   ],
   "require": {
-    "php": "^8.2",
-    "filament/filament": "^3.0.9",
-    "peltonsolutions/laravel-enums": "^1.0"
+	"php": "^8.2",
+	"filament/filament": "^3.0.9",
+	"peltonsolutions/laravel-enums": "^1.1"
   },
   "require-dev": {
-    "pestphp/pest": "^2.33",
-    "pestphp/pest-plugin-livewire": "^2.1"
+	"pestphp/pest": "^2.33",
+	"pestphp/pest-plugin-livewire": "^2.1"
   },
   "autoload": {
-    "psr-4": {
-      "PeltonSolutions\\FilamentEnums\\": "src/"
-    }
+	"psr-4": {
+	  "PeltonSolutions\\FilamentEnums\\": "src/"
+	}
   },
   "autoload-dev": {
-    "psr-4": {
-      "PeltonSolutions\\FilamentEnums\\Tests\\": "tests/"
-    }
+	"psr-4": {
+	  "PeltonSolutions\\FilamentEnums\\Tests\\": "tests/"
+	}
   },
   "scripts": {
-    "test": "vendor/bin/pest"
+	"test": "vendor/bin/pest"
   },
   "extra": {
-    "laravel": {
-      "providers": [
-        "PeltonSolutions\\FilamentEnums\\FilamentEnumsServiceProvider"
-      ]
-    }
+	"laravel": {
+	  "providers": [
+		"PeltonSolutions\\FilamentEnums\\FilamentEnumsServiceProvider"
+	  ]
+	}
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
-    }
+	"allow-plugins": {
+	  "pestphp/pest-plugin": true
+	}
   }
 }
