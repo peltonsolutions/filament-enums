@@ -20,7 +20,8 @@
   "require": {
 	"php": "^8.2",
 	"filament/filament": "^3.0.9",
-	"peltonsolutions/laravel-enums": "^1.1"
+	"peltonsolutions/laravel-enums": "^1.1",
+    "laravel/framework": "^11.26"
   },
   "require-dev": {
 	"pestphp/pest": "^2.33",
