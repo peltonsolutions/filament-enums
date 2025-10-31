@@ -19,7 +19,7 @@
   ],
   "require": {
 	"php": "^8.2",
-	"filament/filament": "^3.0.9",
+	"filament/filament": "^4.0",
 	"peltonsolutions/laravel-enums": "^1.1",
     "laravel/framework": "^11.26"
   },
